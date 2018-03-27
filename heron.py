@@ -17,3 +17,9 @@ def heron(x, accuracy=0.001):
   while abs(G**2 - x) >= accuracy :
     G = (G + x/G)/2
   return round(G, 3)
+
+def newton(x, G, accuracy=0.001):
+  while abs(G**2 - x) >= accuracy :
+    G = G - ((G**2 - x)/(2*G))
+    print(G)
+  return G
